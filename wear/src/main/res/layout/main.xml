@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.wearable.view.WatchViewStub
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/watch_view_stub"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    app:rectLayout="@layout/main_rect"
-    app:roundLayout="@layout/main_round"
-    tools:context=".MainActivity"
-    tools:deviceIds="wear">
-</android.support.wearable.view.WatchViewStub>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        android:background="@color/background">
+
+    <ImageView
+            android:id="@+id/hour"
+            android:layout_width="320dp"
+            android:layout_height="320dp"
+            android:background="@drawable/hour"/>
+
+    <ImageView
+            android:id="@+id/minute"
+            android:layout_width="320dp"
+            android:layout_height="320dp"
+            android:background="@drawable/minute"/>
+
+</RelativeLayout>
