@@ -157,11 +157,11 @@ public class MainActivity extends Activity implements DisplayManager.DisplayList
 
     private void updateTime() {
         // for testing only, since the emulator is in the GMT timezone
-         TimeZone tz = TimeZone.getTimeZone("America/Chicago");
-         Calendar calendar = Calendar.getInstance(tz);
+        // TimeZone tz = TimeZone.getTimeZone("America/Chicago");
+        // Calendar calendar = Calendar.getInstance(tz);
 
         // java's object that knows all about times and dates
-        // Calendar calendar = Calendar.getInstance();
+        Calendar calendar = Calendar.getInstance();
 
         // the number of hours
         int hour = calendar.get(Calendar.HOUR);
@@ -186,13 +186,13 @@ public class MainActivity extends Activity implements DisplayManager.DisplayList
         // update the seconds separately
         updateSeconds(calendar);
 
-
     }
 
     private void updateSeconds(Calendar calendar) {
         int second = calendar.get(Calendar.SECOND);
 
-        float secondRotation = second * 6.0f;
+        // the second hand rotates every second the same amout the minute hand moves every minute.
+        float secondRotation = second * MINUTE_ROTATION_PER_TICK;
 
         Log.d(TAG, "Second: " + second + " | Rotation: " + secondRotation);
 
